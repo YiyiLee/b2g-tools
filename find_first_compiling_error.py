@@ -98,7 +98,7 @@ def main(options):
 
 if __name__ == '__main__':
   parser = OptionParser()
-  parser.add_option('-d', '--dir', dest='dir', help='the directory of b2g')
+  parser.add_option('-d', '--dir', dest='dir', help='the directory of b2g(absolute path)')
   parser.add_option('-n', '--number', dest='number', help='number of commits to try')
 
   (options, args) = parser.parse_args()
