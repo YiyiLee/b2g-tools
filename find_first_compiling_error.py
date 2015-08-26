@@ -1,3 +1,5 @@
+'''which' python2.7 > /dev/null && exec python2.7 "$0" "$@" || exec python "$0" "$@"
+'''
 
 from optparse import OptionParser
 #import git
@@ -55,6 +57,8 @@ def getSettingsFromConfig(dir):
   gecko_path = "%s/gecko" % dir
   output_path = "%s/objdir-gecko" % dir
 
+  # get the settings from .config and .userconfig. The latter will override
+  # former.
   if retrieveValueFromKey(config_data, GECKO_PATH_KEY):
     gecko_path = retrieveValueFromKey(config_data, GECKO_PATH_KEY)
 
